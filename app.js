@@ -71,18 +71,18 @@ var payload, teamID, timestamp, barovalue, tempvalue, humidvalue, accexvalue, ac
 
 // :: MongoDB Localhost
 // mongoose.connect("mongodb://202.139.192.89/TGR_2019_Almight")
-// mongoose.connect("mongodb://202.139.192.89/TGR_2019_Almight")
+mongoose.connect("mongodb://202.139.192.89/TGR_2019_Almight")
 
 
-// let db = mongoose.connection;
+let db = mongoose.connection;
 
-// db.once("open", () => {
-//   console.log("Connected to mongodb");
-// });
+db.once("open", () => {
+  console.log("Connected to mongodb");
+});
 
-// db.on("error", err => {
-//   console.log(err);
-// });
+db.on("error", err => {
+  console.log(err);
+});
 
 /*------------ Create middleware ------------*/
 
